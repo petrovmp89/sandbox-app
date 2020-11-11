@@ -4,7 +4,7 @@ stages:
   - publishImageConfig:
       dockerfilePath: ./Dockerfile
       buildContext: .
-      tag: petrovmp89/sandbox-image:latest
+      tag: petrovmp89/sandbox-image:sandbox
       pushRemote: true
 timeout: 60
 notification:
