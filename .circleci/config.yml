@@ -2,7 +2,7 @@ version: 2.1
 executors:
   docker-publisher:
     environment:
-      IMAGE_NAME: petrovmp89@sandbox-image
+      IMAGE_NAME: petrovmp89/sandbox-image
     docker:
       - image: circleci/buildpack-deps:stretch
 jobs:
