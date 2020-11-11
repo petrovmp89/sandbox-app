@@ -5,10 +5,10 @@ stages:
       dockerfilePath: ./Dockerfile
       buildContext: .
       tag: petrovmp89/sandbox-image:latest
-  - name: Deploy react app workloads
-    steps:
-    - applyYamlConfig:
-        path: ./deployment.yml
+- name: Deploy react app workloads
+  steps:
+  - applyYamlConfig:
+      path: ./deployment.yml
 timeout: 60
 notification:
   recipients:
