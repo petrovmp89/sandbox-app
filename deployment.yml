@@ -1,11 +1,11 @@
 kind: Service
 apiVersion: v1
 metadata:
-  name: sandbox-app-service
+  name: sandbox-app-balancer
 spec:
   selector:
     app: sandbox-app
-  type: NodePort
+  type: LoadBalancer
   ports:
     - protocol: TCP
       port: 3000
@@ -31,6 +31,6 @@ spec:
       - name: pipeline-docker-registry
       containers:
       - name: sandbox-app
-        image: ${CICD_IMAGE}:${CICD_EXECUTION_SEQUENCE}
+        image: petrovmp89/sandbox-image:latest
         ports:
         - containerPort: 3000
