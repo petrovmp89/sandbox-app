@@ -21,6 +21,5 @@ jobs:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
           repository: petrovmp89/sandbox-image
-          tag_with_ref: true
           push: true
           tags: petrovmp89/sandbox-image:latest
