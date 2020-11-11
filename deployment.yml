@@ -34,3 +34,18 @@ spec:
         image: petrovmp89/sandbox-image:latest
         ports:
         - containerPort: 3000
+---
+kind: Ingress
+apiVersion: extensions/v1beta1
+metadata:
+  name: sandbox-app-ingress
+spec:
+  rules:
+  - host: sandbox-app.garantme.fr
+    http:
+      paths:
+      - backend:
+          serviceName: sandbox-app-balancer
+          servicePort: 3000
+        path: /
+        pathType: Prefix
