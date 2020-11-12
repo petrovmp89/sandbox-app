@@ -4,9 +4,7 @@ stages:
   - publishImageConfig:
       dockerfilePath: ./Dockerfile
       buildContext: .
-      tag: petrovmp89/sandbox-image:latest
-      pushRemote: true
-      registry: index.docker.io
+      tag: sandbox-image:${CICD_EXECUTION_SEQUENCE}
 - name: Deploy react app workloads
   steps:
   - applyYamlConfig:

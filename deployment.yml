@@ -31,7 +31,7 @@ spec:
       - name: pipeline-docker-registry
       containers:
       - name: sandbox-app
-        image: petrovmp89/sandbox-image:latest
+        image: ${CICD_IMAGE}:${CICD_EXECUTION_SEQUENCE}
         ports:
         - containerPort: 3000
 ---
