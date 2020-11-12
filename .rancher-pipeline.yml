@@ -5,6 +5,8 @@ stages:
       dockerfilePath: ./Dockerfile
       buildContext: .
       tag: petrovmp89/sandbox-image:latest
+      pushRemote: true
+      registry: index.docker.io
 - name: Deploy react app workloads
   steps:
   - applyYamlConfig:
