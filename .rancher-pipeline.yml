@@ -4,7 +4,7 @@ stages:
   - publishImageConfig:
       dockerfilePath: ./Dockerfile
       buildContext: .
-      tag: sandbox-image:latest
+      tag: petrovmp89/sandbox-image:latest
       pushRemote: true
       registry: index.docker.io
 - name: Deploy react app workloads
