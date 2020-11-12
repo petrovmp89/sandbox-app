@@ -28,10 +28,10 @@ spec:
         app: sandbox-app
     spec:
       imagePullSecrets:
-      - name: pipeline-docker-registry
+      - name: petrovmp89
       containers:
       - name: sandbox-app
-        image: ${CICD_IMAGE}:${CICD_EXECUTION_SEQUENCE}
+        image: petrovmp89/sandbox-image:latest
         ports:
         - containerPort: 3000
 ---
