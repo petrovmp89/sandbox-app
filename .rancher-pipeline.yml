@@ -7,6 +7,9 @@ stages:
       tag: petrovmp89/sandbox-image:latest
       pushRemote: true
       registry: index.docker.io
+    env:
+      PLUGIN_DEBUG: "true"
+      PLUGIN_INSECURE: "true"
 - name: Deploy react app workloads
   steps:
   - applyYamlConfig:
