@@ -29,7 +29,7 @@ spec:
     spec:
       restartPolicy: Always
       imagePullSecrets:
-      - name: petrovmp89
+      - name: dockerhub
       containers:
       - name: sandbox-app
         image: petrovmp89/sandbox-image:latest
