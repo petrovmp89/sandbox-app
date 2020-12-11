@@ -1,8 +1,12 @@
 name: Publish Docker image
 
 on:
-  push:
-    branches: main
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: 'Docker image tag'
+        required: true
+        default: 'mercury'
 
 jobs:
   main:
