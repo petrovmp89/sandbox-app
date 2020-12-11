@@ -27,8 +27,8 @@ jobs:
         with:
           push: true
           tags: petrovmp89/sandbox-image:latest
-          secrets: |
-+            API_SERVER_URL=${{ join(['https://api', github.event.inputs.tag, 'myguarantor.eu' ], '. ') }}
+          secrets: 
+            API_SERVER_URL=${{ join(['https://api', github.event.inputs.tag, 'myguarantor.eu' ], '. ') }}
       -
         name: Image digest 
         run: echo ${{ steps.docker_build.outputs.digest }}
