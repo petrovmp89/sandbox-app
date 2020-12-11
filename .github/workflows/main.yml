@@ -28,9 +28,9 @@ jobs:
           push: true
           tags: petrovmp89/sandbox-image:latest
           secrets: 
-            API_SERVER_URL=${{ join(['https://api', github.event.inputs.tag, 'myguarantor.eu' ], '. ') }}
+            API_SERVER_URL=${{ github.event.inputs.tag }}
       -
-        name: Image digest 
+        name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
 
 # # This is a basic workflow to help you get started with Actions
