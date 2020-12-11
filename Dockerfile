@@ -16,6 +16,6 @@ RUN npm install react-scripts@3.4.1 -g --silent
 
 # add app
 COPY . ./
-RUN echo API_SERVER_URL
+RUN echo $API_SERVER_URL
 # start app
 CMD ["npm", "start"]
